@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\PostsController;
+use App\Http\Controllers\Web\ShowPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => "posts"], function () {
+    Route::get('/', [PostsController::class, "index"])
+    ->name('posts.index');
+
+    Route::get('/posts/{slug}', [ShowPostController::class, "show"])
+    ->name('posts.show');
 });
