@@ -67,10 +67,6 @@ The first command is used to insert the tables in your local database and the se
 
 The application should be working.
 
-To log in you will have to go to the URL`https://.../admin/login`.
-
-To access the application use the `admin@admin.com` and `password`.
-
 ## Packages used
 
 - **[laravel/ui](https://github.com/laravel/ui)**
